@@ -1,16 +1,18 @@
 # JDProgressRoundView
 
-兩種進度顯示方式 (types)：
+###Mutiple Display Style (types)：
 
-`1  (.DownToTop)`                            ` 2   (.Loop)`
+`1  (.DownToTop)` ` 2   (.Loop)` `3. (.GrownCircle)`  
 
-![Alt text](/../master/readme_img/DownToTop.png?raw=true "DownToTop") ![Alt text](/../master/readme_img/Loop.png?raw=true "DownToTop")
+![Alt text](/../master/readme_img/DownToTop.png?raw=true "DownToTop") ![Alt text](/../master/readme_img/Loop.png?raw=true "DownToTop") ![Alt text](/../master/readme_img/GrownCircle.png?raw=true "DownToTop") 
 
 
-`3. (.GrownCircle)`                           ` 4(.Water)`
+ ` 4(.Water)`
 
-![Alt text](/../master/readme_img/GrownCircle.png?raw=true "DownToTop") ![Alt text](/../master/readme_img/water.gif?raw=true "DownToTop")
+![Alt text](/../master/readme_img/water.gif?raw=true "DownToTop")
 
+***
+#Usage
 
 建構式： init(frame :CGRect)  —>   預設顯示方式(.DownToTop)     
 JD:JDProgressRoundView = JDProgressRoundView(frame: self.JDView.frame)
