@@ -1,15 +1,15 @@
 # JDProgressRoundView
 
-兩種進度顯示方式 (types)： 
-1  (.DownToTop) 
+兩種進度顯示方式 (types)：
 
-2   (.Loop)
+`1  (.DownToTop)`                            ` 2   (.Loop)`
+
+![Alt text](/../master/readme_img/DownToTop.png?raw=true "DownToTop") ![Alt text](/../master/readme_img/Loop.png?raw=true "DownToTop")
 
 
-3. (.GrownCircle)
+`3. (.GrownCircle)`                           ` 4(.Water)`
 
-4(.Water)
-
+![Alt text](/../master/readme_img/GrownCircle.png?raw=true "DownToTop") ![Alt text](/../master/readme_img/water.gif?raw=true "DownToTop")
 
 
 建構式： init(frame :CGRect)  —>   預設顯示方式(.DownToTop)     
