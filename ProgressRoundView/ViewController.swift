@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        JD = JDProgressRoundView(frame: self.JDView.frame, howtoincrease: .Water, ProgressColor: UIColor(red: 0.11, green: 0.88, blue: 0.95, alpha: 1.0))
+        JD = JDProgressRoundView(frame: JDView.frame, howtoincrease: .HeartBeat, ProgressColor:  UIColor(red: 0.11, green: 0.88, blue: 0.95, alpha: 1.0), BorderWidth: 13)
         self.view.addSubview(JD)
     }
    

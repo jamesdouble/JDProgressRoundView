@@ -13,6 +13,7 @@ enum types {
     case Loop
     case GrownCircle
     case Water
+    case HeartBeat
 }
 
 
@@ -20,15 +21,17 @@ enum types {
 class JDInnerView:UIView{
     
     var bgColor:UIColor!
+    var UnitString:String = "%"
     var IncreaseType:types = .DownToTop
     var progress:CGFloat = 0.0
     var ProgressLabel:UILabel?
     var ProgressInnerLayer:JDInnerLayer!
     var ProgressRoundLayer:JDRoundLayer!
     
-    init(frame: CGRect,howtoincrease type:types,ProgressColor color:UIColor){
+    init(frame: CGRect,howtoincrease type:types,ProgressColor color:UIColor,UNIT u:String){
         super.init(frame: frame)
         bgColor = color
+        UnitString = u
         IncreaseType = type
         progress = 0.0
     }
@@ -60,42 +63,8 @@ class JDInnerView:UIView{
             }
             
         }
-        else if(IncreaseType == .DownToTop || IncreaseType == .GrownCircle){
-            
-            if(progress != 0.0)
-            {
-                
-                let a:CABasicAnimation = CABasicAnimation(keyPath: "path")
-                a.duration = 1.0
-                a.fromValue = ProgressInnerLayer.path!
-                a.toValue = ProgressInnerLayer.getPath(percent: progress)
-                ProgressInnerLayer.add(a, forKey: "path")
-                ProgressInnerLayer.path = ProgressInnerLayer.getPath(percent: progress)
-            }
-            else{
-                ProgressInnerLayer.removeAllAnimations()
-                ProgressInnerLayer.path = ProgressInnerLayer.getPath(percent: 0.0)
-            }
-        }
-        else if(IncreaseType == .Water)
-        {
-           ProgressInnerLayer.layeranimation?.timer.invalidate()
-            
-            if(progress != 0.0)
-            {
-                let a:CABasicAnimation = CABasicAnimation(keyPath: "path")
-                a.duration = 1.0
-                a.fromValue = ProgressInnerLayer.path!
-                a.toValue = ProgressInnerLayer.getPath(percent: progress)
-                ProgressInnerLayer.add(a, forKey: "path")
-                ProgressInnerLayer.path = ProgressInnerLayer.getPath(percent: progress)
-                
-            }
-            else{
-                ProgressInnerLayer.removeAllAnimations()
-                ProgressInnerLayer.path = ProgressInnerLayer.getPath(percent: 0.0)
-            }
-            ProgressInnerLayer.tickAnimation(FillingColor: bgColor, percent: progress)
+        else{
+            JDLayerAnimation.LayerGrowning(ProgressInnerLayer: self.ProgressInnerLayer,progress: progress)
         }
         
         ProgressLabel?.text = "  \(progress) %"
@@ -110,14 +79,14 @@ class JDInnerView:UIView{
     /// 畫上裡面得圖層
     func DrawInnerLayer(){
         
-        if(IncreaseType == .DownToTop || IncreaseType == .GrownCircle || IncreaseType == .Water)
+        if(!(IncreaseType == .Loop))
         {
             ProgressInnerLayer = JDInnerLayer(ParentControll: self)
             ProgressInnerLayer.DrawCircle(theBounds: self.frame, FillingColor: bgColor ,percent: progress)
             layer.addSublayer(ProgressInnerLayer)
         }
         else{
-            ProgressRoundLayer = JDRoundLayer()
+            ProgressRoundLayer = JDRoundLayer(LineWidth: 13)
             ProgressRoundLayer.DrawCircle(theBounds: self.frame, Stroke_Color: bgColor.cgColor,percent: progress)
             layer.addSublayer(ProgressRoundLayer)
         }

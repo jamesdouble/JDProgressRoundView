@@ -15,7 +15,7 @@ class JDProgressRoundView:UIView{
     var InnerView:JDInnerView?
     var Border:JDRoundLayer?
     
-    init (frame: CGRect,howtoincrease t:types) {
+    init (frame: CGRect,howtoincrease t:types,unit u:String) {
         super.init(frame: frame)
         //點擊事件
         let SingleTap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(JDProgressRoundView.TapView))
@@ -30,19 +30,19 @@ class JDProgressRoundView:UIView{
         var InnerFrame:CGRect = self.frame
         InnerFrame.origin.x = 0.0
         InnerFrame.origin.y = 0.0
-        InnerView = JDInnerView(frame: InnerFrame, howtoincrease: t,ProgressColor: UIColor.red)
+        InnerView = JDInnerView(frame: InnerFrame, howtoincrease: t,ProgressColor: UIColor.red,UNIT : u)
         InnerView?.DrawInnerLayer()
         self.addSubview(InnerView!)
     }
     
-    init (frame: CGRect,howtoincrease t:types,ProgressColor c:UIColor) {
+    init (frame: CGRect,howtoincrease t:types,ProgressColor c:UIColor,BorderWidth b:CGFloat) {
         super.init(frame: frame)
         //點擊事件
         let SingleTap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(JDProgressRoundView.TapView))
         self.addGestureRecognizer(SingleTap)
         
         //外筐
-        Border = JDRoundLayer()
+        Border = JDRoundLayer(LineWidth: b)
         Border?.DrawCircle(theBounds: self.frame, Stroke_Color: UIColor.black.cgColor,percent: 100.0)
         layer.addSublayer(Border!)
         
@@ -50,7 +50,7 @@ class JDProgressRoundView:UIView{
         var InnerFrame:CGRect = self.frame
         InnerFrame.origin.x = 0.0
         InnerFrame.origin.y = 0.0
-        InnerView = JDInnerView(frame: InnerFrame, howtoincrease: t,ProgressColor: c)
+        InnerView = JDInnerView(frame: InnerFrame, howtoincrease: t,ProgressColor: c,UNIT : "%")
         InnerView?.DrawInnerLayer()
         self.addSubview(InnerView!)
     }
