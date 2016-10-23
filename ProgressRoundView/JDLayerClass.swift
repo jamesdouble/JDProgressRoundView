@@ -74,6 +74,7 @@ class JDInnerLayer:CAShapeLayer{
     var halfSize:CGFloat = 0.0
     var ParentInnerView:JDInnerView?
     var layeranimation:JDLayerAnimation?
+    var HeartShadow:Bool = false
     
     override init() {
         super.init()
@@ -101,7 +102,7 @@ class JDInnerLayer:CAShapeLayer{
             DownCircleMask.DrawCircle(theBounds: theBounds,FillingColor: c, percent: 100.0)
             self.mask = DownCircleMask
             layeranimation = JDLayerAnimation(innerlayer: self)
-            //tickAnimation(FillingColor: c, percent: percent)
+            tickAnimation(FillingColor: c, percent: percent)
         }
     }
     
@@ -109,6 +110,10 @@ class JDInnerLayer:CAShapeLayer{
         if(ParentInnerView?.IncreaseType == .Water)
         {
         layeranimation?.WaterLayerAnimation(FillingColor: c, percent: percent)
+        }
+        if(ParentInnerView?.IncreaseType == .HeartBeat && !(HeartShadow))
+        {
+        layeranimation?.HeartBeatAnimation(FillingColor: c, percent: percent)
         }
     }
     
