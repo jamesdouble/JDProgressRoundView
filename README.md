@@ -21,25 +21,35 @@ Thanks for using.
 
 ***
 #Usage
-
-`init(frame :CGRect)`  —>  Default: types=(.DownToTop)  color=(red)   
+```Swift
+init(frame :CGRect)
+```  
+—>  Default: types=(.DownToTop)  color=(red)   
 Example
+```Swift
 JD:JDProgressRoundView = JDProgressRoundView(frame: self.view.frame)
-
+```  
 ---
-
-`init(frame: CGRect,howtoincrease t:types,unit u:String)`  —> Default: color=(red)
+```Swift
+init(frame: CGRect,howtoincrease t:types,unit u:String)
+```
+—> Default: color=(red)
 Example
+```Swift
 JD = JDProgressRoundView(frame: self.view.frame, howtoincrease: .Loop,unit: "%")
-
+```
 ---
-`init (frame: CGRect,howtoincrease t:types,ProgressColor c:UIColor,BorderWidth b:CGFloat)` 
+```Swift
+init (frame: CGRect,howtoincrease t:types,ProgressColor c:UIColor,BorderWidth b:CGFloat)
+```
 Example
+```Swift
 JD = JDProgressRoundView(frame: self.view.frame, howtoincrease: .Water,ProgressColor:UIColor.blue,BorderWidth:13.0)
-
+```
 
 ###Method:
-
+```Swift
 setProgress(p:CGFloat, animated: Bool) —>  SetProgress Directly(Default maximun = 100.0)
 
 setTypes(change:types) —> Change Display Style above
+```
