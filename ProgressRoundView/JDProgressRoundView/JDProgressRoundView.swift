@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class JDProgressRoundView:UIView{
+open class JDProgressRoundView:UIView{
     
     var InnerView:JDInnerView?
     var Border:JDRoundLayer?
@@ -21,7 +21,7 @@ public class JDProgressRoundView:UIView{
         
         //外筐
         Border = JDRoundLayer()
-        Border?.DrawCircle(theBounds: self.frame, Stroke_Color: UIColor.black.cgColor,percent: 100.0)
+        Border?.DrawCircle(self.frame, Stroke_Color: UIColor.black.cgColor,percent: 100.0)
         layer.addSublayer(Border!)
         
         //內進度
@@ -41,7 +41,7 @@ public class JDProgressRoundView:UIView{
         
         //外筐
         Border = JDRoundLayer(LineWidth: b)
-        Border?.DrawCircle(theBounds: self.frame, Stroke_Color: UIColor.black.cgColor,percent: 100.0)
+        Border?.DrawCircle(self.frame, Stroke_Color: UIColor.black.cgColor,percent: 100.0)
         layer.addSublayer(Border!)
         
         //內進度
@@ -62,7 +62,7 @@ public class JDProgressRoundView:UIView{
         
         //外筐
         Border = JDRoundLayer()
-        Border?.DrawCircle(theBounds: self.frame, Stroke_Color: UIColor.black.cgColor,percent: 100.0)
+        Border?.DrawCircle(self.frame, Stroke_Color: UIColor.black.cgColor,percent: 100.0)
         layer.addSublayer(Border!)
         
         //內進度
@@ -75,19 +75,19 @@ public class JDProgressRoundView:UIView{
         
     }
     
-    public func setProgress(p:CGFloat, animated: Bool)
+    open func setProgress(_ p:CGFloat, animated: Bool)
     {
         if(InnerView != nil)
         {
         InnerView?.progress = p - 5.0
-        InnerView?.JDHasBeenTap(animated: animated)
+        InnerView?.JDHasBeenTap(animated)
         }
     }
     
     
-    public func setTypes(change:types)
+    open func setTypes(_ change:types)
     {
-        if(InnerView?.IncreaseType == .Loop)
+        if(InnerView?.IncreaseType == .loop)
         {
             InnerView?.ProgressRoundLayer.removeFromSuperlayer()
         }
@@ -101,7 +101,7 @@ public class JDProgressRoundView:UIView{
     }
     
     func TapView(){
-        InnerView?.JDHasBeenTap(animated: true)
+        InnerView?.JDHasBeenTap(true)
     }
     
     required public init?(coder aDecoder: NSCoder) {

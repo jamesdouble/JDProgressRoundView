@@ -10,7 +10,7 @@ import UIKit
 
 class JDBezierPathClass{
     
-   static func getPath(percent:CGFloat,innerlayer :JDInnerLayer,originalRect:CGRect) -> CGPath{
+   static func getPath(_ percent:CGFloat,innerlayer :JDInnerLayer,originalRect:CGRect) -> CGPath{
         
         let desiredLineWidth:CGFloat = 13
    
@@ -19,11 +19,11 @@ class JDBezierPathClass{
         var e:CGFloat!
         var circlePath:UIBezierPath = UIBezierPath()
         
-        if(innerlayer.ParentInnerView?.IncreaseType == .DownToTop)
+        if(innerlayer.ParentInnerView?.IncreaseType == .downToTop)
         {
             r = CGFloat( innerlayer.halfSize - 2 * (desiredLineWidth/2) )
-            s = CGFloat( CGFloat(M_PI * 0.5) * (1 - percent/50))
-            e = CGFloat( CGFloat(M_PI * 0.5) * (1 + percent/50))
+            s = CGFloat( CGFloat(Double.pi * 0.5) * (1 - percent/50))
+            e = CGFloat( CGFloat(Double.pi * 0.5) * (1 + percent/50))
             
             circlePath = UIBezierPath(arcCenter: CGPoint(x:innerlayer.halfSize,y:innerlayer.halfSize),
                                       radius: r,
@@ -34,11 +34,11 @@ class JDBezierPathClass{
             return circlePath.cgPath
             
         }
-        if(innerlayer.ParentInnerView?.IncreaseType == .GrownCircle )
+        if(innerlayer.ParentInnerView?.IncreaseType == .grownCircle )
         {
             r = CGFloat( (innerlayer.halfSize - 2 * (desiredLineWidth/2)) * percent/100.0 )
             s = CGFloat( 0 )
-            e = CGFloat( CGFloat(M_PI * 2) )
+            e = CGFloat( CGFloat(Double.pi * 2) )
             
             circlePath = UIBezierPath(arcCenter: CGPoint(x:innerlayer.halfSize,y:innerlayer.halfSize),
                                       radius: r,
@@ -48,7 +48,7 @@ class JDBezierPathClass{
             circlePath.fill()
             return circlePath.cgPath
         }
-        if(innerlayer.ParentInnerView?.IncreaseType == .Water)
+        if(innerlayer.ParentInnerView?.IncreaseType == .water)
         {
             let centerY = innerlayer.halfSize * (100.0 - percent)/50
             let steps = 200                 // Divide the curve into steps
@@ -77,7 +77,7 @@ class JDBezierPathClass{
             path.fill()
             return path.cgPath
         }
-        if(innerlayer.ParentInnerView?.IncreaseType == .HeartBeat)
+        if(innerlayer.ParentInnerView?.IncreaseType == .heartBeat)
         {
             let scaledWidth = innerlayer.halfSize * 2 * (percent/100.0)
             let scaledXValue = innerlayer.halfSize * (1 - percent/100.0)
@@ -95,13 +95,13 @@ class JDBezierPathClass{
             
             circlePath.addArc(withCenter: CGPoint(x:scaledRect.origin.x + (scaledRect.size.width/4),y:scaledRect.origin.y + (scaledRect.size.height/4)),
                                   radius: (scaledRect.size.width/4),
-                                  startAngle: CGFloat(M_PI),
+                                  startAngle: CGFloat(Double.pi),
                                   endAngle: 0,
                                   clockwise: true)
             
             circlePath.addArc(withCenter: CGPoint(x:scaledRect.origin.x + (scaledRect.size.width * 3/4),y:scaledRect.origin.y + (scaledRect.size.height/4)),
                                   radius: (scaledRect.size.width/4),
-                                  startAngle: CGFloat(M_PI),
+                                  startAngle: CGFloat(Double.pi),
                                   endAngle: 0,
                                   clockwise: true)
             
@@ -114,8 +114,8 @@ class JDBezierPathClass{
         
         
         r = CGFloat( innerlayer.halfSize - 2 * (desiredLineWidth/2) )
-        s = CGFloat( CGFloat(M_PI * 0.5) * (1 - percent/50))
-        e = CGFloat( CGFloat(M_PI * 0.5) * (1 + percent/50))
+        s = CGFloat( CGFloat(Double.pi * 0.5) * (1 - percent/50))
+        e = CGFloat( CGFloat(Double.pi * 0.5) * (1 + percent/50))
         
         circlePath = UIBezierPath(arcCenter: CGPoint(x:innerlayer.halfSize,y:innerlayer.halfSize),
                                   radius: r,

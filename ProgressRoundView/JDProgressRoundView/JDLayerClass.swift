@@ -29,17 +29,15 @@ class JDRoundLayer:CAShapeLayer{
         desiredLineWidth = w
     }
     
-    override init(layer: Any) {
-        super.init(layer: layer)
-    }
     
-    func getPath(percent:CGFloat) -> CGPath{
+    
+    func getPath(_ percent:CGFloat) -> CGPath{
     
         let circlePath = UIBezierPath(
             arcCenter: CGPoint(x:halfSize,y:halfSize),
             radius: CGFloat( halfSize - (desiredLineWidth/2) ),
-            startAngle: CGFloat(M_PI * 1.5),
-            endAngle:CGFloat(M_PI * 1.5) + CGFloat(M_PI * 2) * percent/100 ,
+            startAngle: CGFloat(Double.pi * 1.5),
+            endAngle:CGFloat(Double.pi * 1.5) + CGFloat(Double.pi * 2) * percent/100 ,
             clockwise: true)
         
         circlePath.lineCapStyle = .round
@@ -49,9 +47,9 @@ class JDRoundLayer:CAShapeLayer{
     }
     
     
-    func DrawCircle(theBounds:CGRect,Stroke_Color:CGColor,percent:CGFloat){
+    func DrawCircle(_ theBounds:CGRect,Stroke_Color:CGColor,percent:CGFloat){
         halfSize = min( theBounds.size.width/2, theBounds.size.height/2)
-        let circlePath = getPath(percent: percent)
+        let circlePath = getPath(percent)
         self.path = circlePath
         self.lineCap = "kCALineCapRound"
         self.lineJoin = "kCALineJoinRound"
@@ -87,19 +85,19 @@ class JDInnerLayer:CAShapeLayer{
     
     //DrawCircle:: 才會使用到
     
-    func DrawCircle(theBounds:CGRect,FillingColor c:UIColor,percent:CGFloat){
+    func DrawCircle(_ theBounds:CGRect,FillingColor c:UIColor,percent:CGFloat){
         halfSize = min( theBounds.size.width/2, theBounds.size.height/2)
         let desiredLineWidth:CGFloat = 13
-        let circlePath:CGPath = JDBezierPathClass.getPath(percent: percent, innerlayer: self, originalRect: theBounds)
+        let circlePath:CGPath = JDBezierPathClass.getPath(percent, innerlayer: self, originalRect: theBounds)
         self.path = circlePath
         self.fillColor = c.cgColor
         self.strokeColor = UIColor.clear.cgColor
         self.lineWidth = desiredLineWidth
-        if(ParentInnerView?.IncreaseType == .Water || ParentInnerView?.IncreaseType == .HeartBeat)
+        if(ParentInnerView?.IncreaseType == .water || ParentInnerView?.IncreaseType == .heartBeat)
         {
             //遮罩
             let DownCircleMask:JDInnerLayer = JDInnerLayer()
-            DownCircleMask.DrawCircle(theBounds: theBounds,FillingColor: c, percent: 100.0)
+            DownCircleMask.DrawCircle(theBounds,FillingColor: c, percent: 100.0)
             self.mask = DownCircleMask
             layeranimation = JDLayerAnimation(innerlayer: self)
             tickAnimation(FillingColor: c, percent: percent)
@@ -107,11 +105,11 @@ class JDInnerLayer:CAShapeLayer{
     }
     
     func tickAnimation(FillingColor c:UIColor,percent:CGFloat){
-        if(ParentInnerView?.IncreaseType == .Water)
+        if(ParentInnerView?.IncreaseType == .water)
         {
         layeranimation?.WaterLayerAnimation(FillingColor: c, percent: percent)
         }
-        if(ParentInnerView?.IncreaseType == .HeartBeat && !(HeartShadow))
+        if(ParentInnerView?.IncreaseType == .heartBeat && !(HeartShadow))
         {
         layeranimation?.HeartBeatAnimation(FillingColor: c, percent: percent)
         }

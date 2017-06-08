@@ -190,15 +190,18 @@
 				TargetAttributes = {
 					6B4D0F021DAC860700DD1A0D = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					6B4D0F161DAC860800DD1A0D = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 6B4D0F021DAC860700DD1A0D;
 					};
 					6B4D0F211DAC860800DD1A0D = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 6B4D0F021DAC860700DD1A0D;
 					};

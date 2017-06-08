@@ -73,7 +73,7 @@ class JDLayerAnimation{
         BeatingLayer = JDInnerLayer(ParentControll: self.animatedlayer.ParentInnerView!)
         BeatingLayer?.opacity = 0.0
         BeatingLayer?.HeartShadow = true
-        BeatingLayer?.DrawCircle(theBounds: (self.animatedlayer.ParentInnerView?.bounds)!, FillingColor: UIColor.red, percent: percent * 1.2)
+        BeatingLayer?.DrawCircle((self.animatedlayer.ParentInnerView?.bounds)!, FillingColor: UIColor.red, percent: percent * 1.2)
         self.animatedlayer.ParentInnerView?.layer.addSublayer(BeatingLayer!)
         return
         }
@@ -110,15 +110,15 @@ class JDLayerAnimation{
                 let a:CABasicAnimation = CABasicAnimation(keyPath: "path")
                 a.duration = 1.0
                 a.fromValue = p.path!
-                a.toValue = JDBezierPathClass.getPath(percent: progress, innerlayer: p, originalRect: (p.ParentInnerView?.frame)!)
+                a.toValue = JDBezierPathClass.getPath(progress, innerlayer: p, originalRect: (p.ParentInnerView?.frame)!)
                 p.add(a, forKey: "path")
-                p.path = JDBezierPathClass.getPath(percent: progress, innerlayer: p, originalRect: (p.ParentInnerView?.frame)!)
+                p.path = JDBezierPathClass.getPath(progress, innerlayer: p, originalRect: (p.ParentInnerView?.frame)!)
         }
         else{
                 p.removeAllAnimations()
-                p.path = JDBezierPathClass.getPath(percent: 0.0, innerlayer: p, originalRect:  (p.ParentInnerView?.frame)!)
+                p.path = JDBezierPathClass.getPath(0.0, innerlayer: p, originalRect:  (p.ParentInnerView?.frame)!)
         }
-        if(p.ParentInnerView?.IncreaseType == .Water || p.ParentInnerView?.IncreaseType == .HeartBeat)
+        if(p.ParentInnerView?.IncreaseType == .water || p.ParentInnerView?.IncreaseType == .heartBeat)
         {
           p.tickAnimation(FillingColor: (p.ParentInnerView?.bgColor)!, percent: progress)
         }

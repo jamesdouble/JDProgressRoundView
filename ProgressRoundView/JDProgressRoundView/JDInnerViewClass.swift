@@ -9,11 +9,11 @@
 import UIKit
 
 public enum types {
-    case DownToTop
-    case Loop
-    case GrownCircle
-    case Water
-    case HeartBeat
+    case downToTop
+    case loop
+    case grownCircle
+    case water
+    case heartBeat
 }
 
 
@@ -22,7 +22,7 @@ class JDInnerView:UIView{
     
     var bgColor:UIColor!
     var UnitString:String = "%"
-    var IncreaseType:types = .DownToTop
+    var IncreaseType:types = .downToTop
     var progress:CGFloat = 0.0
     var ProgressLabel:UILabel?
     var ProgressInnerLayer:JDInnerLayer!
@@ -39,27 +39,27 @@ class JDInnerView:UIView{
     override init(frame: CGRect) {
         super.init(frame: frame)
         bgColor = UIColor.red
-        IncreaseType = .DownToTop
+        IncreaseType = .downToTop
         progress = 0.0
     }
     
-    func JDHasBeenTap(animated: Bool){
+    func JDHasBeenTap(_ animated: Bool){
         progress += 5.0
         
-        if(IncreaseType == .Loop )
+        if(IncreaseType == .loop )
         {
             if(progress != 0.0)
             {
                 let a:CABasicAnimation = CABasicAnimation(keyPath: "path")
                 a.duration = 1.0
                 a.fromValue = ProgressRoundLayer.path!
-                a.toValue = ProgressRoundLayer.getPath(percent: progress)
+                a.toValue = ProgressRoundLayer.getPath(progress)
                 ProgressRoundLayer.add(a, forKey: "path")
-                ProgressRoundLayer.path = ProgressRoundLayer.getPath(percent: progress)
+                ProgressRoundLayer.path = ProgressRoundLayer.getPath(progress)
             }
             else{
                 ProgressRoundLayer.removeAllAnimations()
-                ProgressRoundLayer.path = ProgressRoundLayer.getPath(percent: 0.0)
+                ProgressRoundLayer.path = ProgressRoundLayer.getPath(0.0)
             }
             
         }
@@ -79,15 +79,15 @@ class JDInnerView:UIView{
     /// 畫上裡面得圖層
     func DrawInnerLayer(){
         
-        if(!(IncreaseType == .Loop))
+        if(!(IncreaseType == .loop))
         {
             ProgressInnerLayer = JDInnerLayer(ParentControll: self)
-            ProgressInnerLayer.DrawCircle(theBounds: self.frame, FillingColor: bgColor ,percent: progress)
+            ProgressInnerLayer.DrawCircle(self.frame, FillingColor: bgColor ,percent: progress)
             layer.addSublayer(ProgressInnerLayer)
         }
         else{
             ProgressRoundLayer = JDRoundLayer(LineWidth: 13)
-            ProgressRoundLayer.DrawCircle(theBounds: self.frame, Stroke_Color: bgColor.cgColor,percent: progress)
+            ProgressRoundLayer.DrawCircle(self.frame, Stroke_Color: bgColor.cgColor,percent: progress)
             layer.addSublayer(ProgressRoundLayer)
         }
         
