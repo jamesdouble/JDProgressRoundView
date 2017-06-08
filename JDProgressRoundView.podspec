@@ -1,17 +1,17 @@
 Pod::Spec.new do |s|
-  s.name             = 'JDMailBox'
-  s.version          = '1.0.0'
-  s.summary          = 'Send Mail Animation'
+  s.name             = 'JDProgressRoundView'
+  s.version          = '2.0.0'
+  s.summary          = 'Progress Meter'
   s.description      = <<-DESC
-JDMailBox is basically a MFMailComposeViewController 📬 , but I think it will be more interesting with an animation..
-                       DESC
- 
-  s.homepage         = 'https://github.com/jamesdouble/JDMailBox'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+JDProgressRoundView is Stylish Process Meter Based on UIProgressView. It growns 5% every tap, or you can just set the progress u want.                      
+	 DESC 
+  
+  s.homepage         = 'https://github.com/jamesdouble/JDProgressRoundView'
+  s.license          = { :type => 'Apache License 2.0', :file => 'LICENSE' }
   s.author           = { 'JamesDouble' => 'jameskuo12345@gmail.com' }
-  s.source           = { :git => 'https://github.com/jamesdouble/JDMailBox.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/jamesdouble/JDProgressRoundView.git', :tag => s.version.to_s }
  
   s.ios.deployment_target = '8.0'
-  s.source_files = 'JDMailBox/JDMailBox/*'
+  s.source_files = 'JDProgressRoundView/JDProgressRoundView/*'
  
 end
