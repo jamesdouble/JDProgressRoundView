@@ -8,14 +8,12 @@
 
 import UIKit
 
-
-
-class JDProgressRoundView:UIView{
+public class JDProgressRoundView:UIView{
     
     var InnerView:JDInnerView?
     var Border:JDRoundLayer?
     
-    init (frame: CGRect,howtoincrease t:types,unit u:String) {
+    public init (frame: CGRect,howtoincrease t:types,unit u:String) {
         super.init(frame: frame)
         //點擊事件
         let SingleTap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(JDProgressRoundView.TapView))
@@ -35,7 +33,7 @@ class JDProgressRoundView:UIView{
         self.addSubview(InnerView!)
     }
     
-    init (frame: CGRect,howtoincrease t:types,ProgressColor c:UIColor,BorderWidth b:CGFloat) {
+    public init (frame: CGRect,howtoincrease t:types,ProgressColor c:UIColor,BorderWidth b:CGFloat) {
         super.init(frame: frame)
         //點擊事件
         let SingleTap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(JDProgressRoundView.TapView))
@@ -56,7 +54,7 @@ class JDProgressRoundView:UIView{
     }
     
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         //點擊事件
         let SingleTap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(JDProgressRoundView.TapView))
@@ -77,10 +75,7 @@ class JDProgressRoundView:UIView{
         
     }
     
-    
-    
-    
-    func setProgress(p:CGFloat, animated: Bool)
+    public func setProgress(p:CGFloat, animated: Bool)
     {
         if(InnerView != nil)
         {
@@ -90,7 +85,7 @@ class JDProgressRoundView:UIView{
     }
     
     
-    func setTypes(change:types)
+    public func setTypes(change:types)
     {
         if(InnerView?.IncreaseType == .Loop)
         {
@@ -109,7 +104,7 @@ class JDProgressRoundView:UIView{
         InnerView?.JDHasBeenTap(animated: true)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     

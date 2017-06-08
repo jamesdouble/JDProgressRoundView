@@ -7,18 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B063C371DB5B9CD006940D8 /* JDLayerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B063C361DB5B9CD006940D8 /* JDLayerClass.swift */; };
-		6B063C4F1DB9A7C7006940D8 /* JDLayerAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B063C4E1DB9A7C7006940D8 /* JDLayerAnimation.swift */; };
-		6B063C511DB9DF3D006940D8 /* JDBezierPathClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B063C501DB9DF3D006940D8 /* JDBezierPathClass.swift */; };
+		4F89ABFA1EE9740C002A680D /* JDBezierPathClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F89ABF51EE9740C002A680D /* JDBezierPathClass.swift */; };
+		4F89ABFB1EE9740C002A680D /* JDInnerViewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F89ABF61EE9740C002A680D /* JDInnerViewClass.swift */; };
+		4F89ABFC1EE9740C002A680D /* JDLayerAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F89ABF71EE9740C002A680D /* JDLayerAnimation.swift */; };
+		4F89ABFD1EE9740C002A680D /* JDLayerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F89ABF81EE9740C002A680D /* JDLayerClass.swift */; };
+		4F89ABFE1EE9740C002A680D /* JDProgressRoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F89ABF91EE9740C002A680D /* JDProgressRoundView.swift */; };
 		6B4D0F071DAC860800DD1A0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4D0F061DAC860800DD1A0D /* AppDelegate.swift */; };
 		6B4D0F091DAC860800DD1A0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4D0F081DAC860800DD1A0D /* ViewController.swift */; };
 		6B4D0F0C1DAC860800DD1A0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B4D0F0A1DAC860800DD1A0D /* Main.storyboard */; };
 		6B4D0F0E1DAC860800DD1A0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B4D0F0D1DAC860800DD1A0D /* Assets.xcassets */; };
 		6B4D0F111DAC860800DD1A0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B4D0F0F1DAC860800DD1A0D /* LaunchScreen.storyboard */; };
-		6B4D0F1C1DAC860800DD1A0D /* ProgressRoundViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4D0F1B1DAC860800DD1A0D /* ProgressRoundViewTests.swift */; };
-		6B4D0F271DAC860800DD1A0D /* ProgressRoundViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4D0F261DAC860800DD1A0D /* ProgressRoundViewUITests.swift */; };
-		6B4D0F351DAC865E00DD1A0D /* JDProgressRoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4D0F341DAC865E00DD1A0D /* JDProgressRoundView.swift */; };
-		6B4D0F371DACE32E00DD1A0D /* JDInnerViewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4D0F361DACE32D00DD1A0D /* JDInnerViewClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6B063C361DB5B9CD006940D8 /* JDLayerClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDLayerClass.swift; sourceTree = "<group>"; };
-		6B063C4E1DB9A7C7006940D8 /* JDLayerAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDLayerAnimation.swift; sourceTree = "<group>"; };
-		6B063C501DB9DF3D006940D8 /* JDBezierPathClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDBezierPathClass.swift; sourceTree = "<group>"; };
+		4F89ABF51EE9740C002A680D /* JDBezierPathClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JDBezierPathClass.swift; path = JDProgressRoundView/JDBezierPathClass.swift; sourceTree = "<group>"; };
+		4F89ABF61EE9740C002A680D /* JDInnerViewClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JDInnerViewClass.swift; path = JDProgressRoundView/JDInnerViewClass.swift; sourceTree = "<group>"; };
+		4F89ABF71EE9740C002A680D /* JDLayerAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JDLayerAnimation.swift; path = JDProgressRoundView/JDLayerAnimation.swift; sourceTree = "<group>"; };
+		4F89ABF81EE9740C002A680D /* JDLayerClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JDLayerClass.swift; path = JDProgressRoundView/JDLayerClass.swift; sourceTree = "<group>"; };
+		4F89ABF91EE9740C002A680D /* JDProgressRoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JDProgressRoundView.swift; path = JDProgressRoundView/JDProgressRoundView.swift; sourceTree = "<group>"; };
 		6B4D0F031DAC860800DD1A0D /* ProgressRoundView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProgressRoundView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B4D0F061DAC860800DD1A0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B4D0F081DAC860800DD1A0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,13 +50,7 @@
 		6B4D0F101DAC860800DD1A0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B4D0F121DAC860800DD1A0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B4D0F171DAC860800DD1A0D /* ProgressRoundViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProgressRoundViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B4D0F1B1DAC860800DD1A0D /* ProgressRoundViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRoundViewTests.swift; sourceTree = "<group>"; };
-		6B4D0F1D1DAC860800DD1A0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B4D0F221DAC860800DD1A0D /* ProgressRoundViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProgressRoundViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B4D0F261DAC860800DD1A0D /* ProgressRoundViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRoundViewUITests.swift; sourceTree = "<group>"; };
-		6B4D0F281DAC860800DD1A0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6B4D0F341DAC865E00DD1A0D /* JDProgressRoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDProgressRoundView.swift; sourceTree = "<group>"; };
-		6B4D0F361DACE32D00DD1A0D /* JDInnerViewClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDInnerViewClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,12 +78,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F89ABF41EE971AF002A680D /* JDProgressRoundView */ = {
+			isa = PBXGroup;
+			children = (
+				4F89ABF51EE9740C002A680D /* JDBezierPathClass.swift */,
+				4F89ABF61EE9740C002A680D /* JDInnerViewClass.swift */,
+				4F89ABF71EE9740C002A680D /* JDLayerAnimation.swift */,
+				4F89ABF81EE9740C002A680D /* JDLayerClass.swift */,
+				4F89ABF91EE9740C002A680D /* JDProgressRoundView.swift */,
+			);
+			name = JDProgressRoundView;
+			sourceTree = "<group>";
+		};
 		6B4D0EFA1DAC860700DD1A0D = {
 			isa = PBXGroup;
 			children = (
 				6B4D0F051DAC860800DD1A0D /* ProgressRoundView */,
-				6B4D0F1A1DAC860800DD1A0D /* ProgressRoundViewTests */,
-				6B4D0F251DAC860800DD1A0D /* ProgressRoundViewUITests */,
 				6B4D0F041DAC860800DD1A0D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,37 +111,15 @@
 		6B4D0F051DAC860800DD1A0D /* ProgressRoundView */ = {
 			isa = PBXGroup;
 			children = (
+				4F89ABF41EE971AF002A680D /* JDProgressRoundView */,
 				6B4D0F061DAC860800DD1A0D /* AppDelegate.swift */,
 				6B4D0F081DAC860800DD1A0D /* ViewController.swift */,
 				6B4D0F0A1DAC860800DD1A0D /* Main.storyboard */,
 				6B4D0F0D1DAC860800DD1A0D /* Assets.xcassets */,
 				6B4D0F0F1DAC860800DD1A0D /* LaunchScreen.storyboard */,
-				6B4D0F341DAC865E00DD1A0D /* JDProgressRoundView.swift */,
 				6B4D0F121DAC860800DD1A0D /* Info.plist */,
-				6B4D0F361DACE32D00DD1A0D /* JDInnerViewClass.swift */,
-				6B063C361DB5B9CD006940D8 /* JDLayerClass.swift */,
-				6B063C4E1DB9A7C7006940D8 /* JDLayerAnimation.swift */,
-				6B063C501DB9DF3D006940D8 /* JDBezierPathClass.swift */,
 			);
 			path = ProgressRoundView;
-			sourceTree = "<group>";
-		};
-		6B4D0F1A1DAC860800DD1A0D /* ProgressRoundViewTests */ = {
-			isa = PBXGroup;
-			children = (
-				6B4D0F1B1DAC860800DD1A0D /* ProgressRoundViewTests.swift */,
-				6B4D0F1D1DAC860800DD1A0D /* Info.plist */,
-			);
-			path = ProgressRoundViewTests;
-			sourceTree = "<group>";
-		};
-		6B4D0F251DAC860800DD1A0D /* ProgressRoundViewUITests */ = {
-			isa = PBXGroup;
-			children = (
-				6B4D0F261DAC860800DD1A0D /* ProgressRoundViewUITests.swift */,
-				6B4D0F281DAC860800DD1A0D /* Info.plist */,
-			);
-			path = ProgressRoundViewUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,12 +256,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B4D0F371DACE32E00DD1A0D /* JDInnerViewClass.swift in Sources */,
+				4F89ABFD1EE9740C002A680D /* JDLayerClass.swift in Sources */,
 				6B4D0F091DAC860800DD1A0D /* ViewController.swift in Sources */,
-				6B063C4F1DB9A7C7006940D8 /* JDLayerAnimation.swift in Sources */,
-				6B063C511DB9DF3D006940D8 /* JDBezierPathClass.swift in Sources */,
-				6B4D0F351DAC865E00DD1A0D /* JDProgressRoundView.swift in Sources */,
-				6B063C371DB5B9CD006940D8 /* JDLayerClass.swift in Sources */,
+				4F89ABFB1EE9740C002A680D /* JDInnerViewClass.swift in Sources */,
+				4F89ABFA1EE9740C002A680D /* JDBezierPathClass.swift in Sources */,
+				4F89ABFC1EE9740C002A680D /* JDLayerAnimation.swift in Sources */,
+				4F89ABFE1EE9740C002A680D /* JDProgressRoundView.swift in Sources */,
 				6B4D0F071DAC860800DD1A0D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +270,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B4D0F1C1DAC860800DD1A0D /* ProgressRoundViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +277,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B4D0F271DAC860800DD1A0D /* ProgressRoundViewUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

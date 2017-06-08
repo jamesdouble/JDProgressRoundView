@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum types {
+public enum types {
     case DownToTop
     case Loop
     case GrownCircle
