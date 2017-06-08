@@ -1,6 +1,6 @@
 # JDProgressRoundView
 
-###Mutiple Display Style (types)：
+### Mutiple Display Style (types)：
 
 `1  (.DownToTop)` ` 2   (.Loop)` `3. (.GrownCircle)`  
 
@@ -12,7 +12,7 @@
 ![Alt text](/../master/readme_img/water.gif?raw=true "DownToTop") ![Alt text](/../master/readme_img/HeartBeat.gif?raw=true "HeartBeat.gif")
 
 ***
-#Introduction
+# Introduction
 
 JDProgressRoundView is Stylish Process Meter Based on UIProgressView.
 It growns 5% every tap, or you can just set the progress u want.
@@ -20,7 +20,17 @@ It growns 5% every tap, or you can just set the progress u want.
 Thanks for using.
 
 ***
-#Usage
+# Installation
+You can use cocoapods now.
+
+```
+ pod 'JDProgressRoundView'
+
+```
+Or fork my repo & import the JDProgressRoundView Directory.
+
+***
+# Usage
 ```Swift
 init(frame :CGRect)
 ```  
@@ -47,7 +57,7 @@ Example
 JD = JDProgressRoundView(frame: self.view.frame, howtoincrease: .Water,ProgressColor:UIColor.blue,BorderWidth:13.0)
 ```
 
-###Method:
+### Method:
 ```Swift
 setProgress(p:CGFloat, animated: Bool) —>  SetProgress Directly(Default maximun = 100.0)
 
