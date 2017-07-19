@@ -170,7 +170,6 @@ class JDBezierPathClass{
                                       startAngle: s,
                                       endAngle: e,
                                       clockwise: true)
-            circlePath.fill()
             return circlePath.cgPath
         }
         if(IncreaseType == .water)

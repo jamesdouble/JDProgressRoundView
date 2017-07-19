@@ -101,7 +101,7 @@ class JDInnerView:UIView{
         }
         else
         {
-            ProgressInnerLayer = JDRoundLayer(LineWidth: 13.0, theBounds: self.frame.size, Stroke_Color: UIColor.black.cgColor, percent: 50.0)
+            ProgressInnerLayer = JDRoundLayer(LineWidth: 13.0, theBounds: self.frame.size, Stroke_Color: bgColor.cgColor, percent: 0.0)
         }
         layer.addSublayer(ProgressInnerLayer)
         if(IncreaseType == .heartBeat)
@@ -111,12 +111,20 @@ class JDInnerView:UIView{
         
         //中間百分比
         ProgressLabel?.removeFromSuperview()
-        let LabelFrame:CGRect = CGRect(x: 0.0, y: 0.35 * self.frame.height, width: self.frame.width, height: self.frame.height * 0.3)
+        let LabelFrame:CGRect = CGRect.zero
         ProgressLabel = UILabel(frame: LabelFrame)
+        ProgressLabel?.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(ProgressLabel!)
+        let width = NSLayoutConstraint(item: ProgressLabel!, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 0.6, constant: 0.0)
+        let height = NSLayoutConstraint(item: ProgressLabel!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 30.0)
+        ProgressLabel?.addConstraint(height)
+        let MidX = NSLayoutConstraint(item: ProgressLabel!, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1.0, constant: 0.0)
+        let Midy = NSLayoutConstraint(item: ProgressLabel!, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1.0, constant: 0.0)
+        self.addConstraints([width,MidX,Midy])
         ProgressLabel?.font = UIFont.systemFont(ofSize: 20, weight: UIFontWeightThin)
         ProgressLabel?.text = "  \(progress) %"
         ProgressLabel?.textAlignment = .center
-        self.addSubview(ProgressLabel!)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
