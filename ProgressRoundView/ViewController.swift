@@ -16,23 +16,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        JD = JDProgressRoundView(frame: JDView.frame, howtoincrease: .heartBeat, ProgressColor:  UIColor(red: 0.96, green: 0.85, blue: 0.95, alpha: 1.0), BorderWidth: 13)
+        JD = JDProgressRoundView(frame: JDView.frame, howtoincrease: .heartBeat)
         self.view.addSubview(JD)
-        
-        //heart [UIColor colorWithRed:0.96 green:0.85 blue:0.95 alpha:1.0]
-        //Water Color UIColor(red: 0.11, green: 0.88, blue: 0.95, alpha: 1.0)
     }
    
     @IBAction func changetype(_ sender: AnyObject) {
         
-        if(JD.InnerView?.IncreaseType == .downToTop)
-        {
-        JD.setTypes(.loop)
-        }
-        else{
-        JD.setTypes(.downToTop)
-        }
- 
     }
     
 

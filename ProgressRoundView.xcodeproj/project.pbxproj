@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F89ABFA1EE9740C002A680D /* JDBezierPathClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F89ABF51EE9740C002A680D /* JDBezierPathClass.swift */; };
-		4F89ABFB1EE9740C002A680D /* JDInnerViewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F89ABF61EE9740C002A680D /* JDInnerViewClass.swift */; };
 		4F89ABFC1EE9740C002A680D /* JDLayerAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F89ABF71EE9740C002A680D /* JDLayerAnimation.swift */; };
 		4F89ABFD1EE9740C002A680D /* JDLayerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F89ABF81EE9740C002A680D /* JDLayerClass.swift */; };
 		4F89ABFE1EE9740C002A680D /* JDProgressRoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F89ABF91EE9740C002A680D /* JDProgressRoundView.swift */; };
@@ -37,8 +35,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4F89ABF51EE9740C002A680D /* JDBezierPathClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JDBezierPathClass.swift; path = JDProgressRoundView/JDBezierPathClass.swift; sourceTree = "<group>"; };
-		4F89ABF61EE9740C002A680D /* JDInnerViewClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JDInnerViewClass.swift; path = JDProgressRoundView/JDInnerViewClass.swift; sourceTree = "<group>"; };
 		4F89ABF71EE9740C002A680D /* JDLayerAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JDLayerAnimation.swift; path = JDProgressRoundView/JDLayerAnimation.swift; sourceTree = "<group>"; };
 		4F89ABF81EE9740C002A680D /* JDLayerClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JDLayerClass.swift; path = JDProgressRoundView/JDLayerClass.swift; sourceTree = "<group>"; };
 		4F89ABF91EE9740C002A680D /* JDProgressRoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JDProgressRoundView.swift; path = JDProgressRoundView/JDProgressRoundView.swift; sourceTree = "<group>"; };
@@ -81,11 +77,9 @@
 		4F89ABF41EE971AF002A680D /* JDProgressRoundView */ = {
 			isa = PBXGroup;
 			children = (
-				4F89ABF51EE9740C002A680D /* JDBezierPathClass.swift */,
-				4F89ABF61EE9740C002A680D /* JDInnerViewClass.swift */,
+				4F89ABF91EE9740C002A680D /* JDProgressRoundView.swift */,
 				4F89ABF71EE9740C002A680D /* JDLayerAnimation.swift */,
 				4F89ABF81EE9740C002A680D /* JDLayerClass.swift */,
-				4F89ABF91EE9740C002A680D /* JDProgressRoundView.swift */,
 			);
 			name = JDProgressRoundView;
 			sourceTree = "<group>";
@@ -185,7 +179,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = waninuser;
 				TargetAttributes = {
 					6B4D0F021DAC860700DD1A0D = {
@@ -261,8 +255,6 @@
 			files = (
 				4F89ABFD1EE9740C002A680D /* JDLayerClass.swift in Sources */,
 				6B4D0F091DAC860800DD1A0D /* ViewController.swift in Sources */,
-				4F89ABFB1EE9740C002A680D /* JDInnerViewClass.swift in Sources */,
-				4F89ABFA1EE9740C002A680D /* JDBezierPathClass.swift in Sources */,
 				4F89ABFC1EE9740C002A680D /* JDLayerAnimation.swift in Sources */,
 				4F89ABFE1EE9740C002A680D /* JDProgressRoundView.swift in Sources */,
 				6B4D0F071DAC860800DD1A0D /* AppDelegate.swift in Sources */,
@@ -336,6 +328,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -386,6 +379,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
