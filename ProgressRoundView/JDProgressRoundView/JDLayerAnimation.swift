@@ -188,9 +188,7 @@ class JDBezierPathClass{
             }
             path.addLine(to: CGPoint(x: 2 * halfsize, y: 2 * halfsize))
             path.close()
-            let fillColor = UIColor.blue
-            fillColor.setFill()
-            path.fill()
+            
             if(self.count > 10000)
             {
                 self.count = 0

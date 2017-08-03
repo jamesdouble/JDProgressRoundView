@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        JD = JDProgressRoundView(frame: JDView.frame, howtoincrease: .heartBeat)
+        JD = JDProgressRoundView(frame: JDView.frame, howtoincrease: .water)
         self.view.addSubview(JD)
     }
    
